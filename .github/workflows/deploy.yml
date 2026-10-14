@@ -33,6 +33,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_API_URL: https://lab-11-khyv.onrender.com
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
