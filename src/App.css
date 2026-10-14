@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #334155;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.logo-badge {
+  font-size: 0.75rem;
+  background-color: #0284c7;
+  color: #fff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-btn {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: #f8fafc;
+  background-color: #334155;
+}
+
+.nav-btn.active {
+  color: #fff;
+  background-color: #0284c7;
+}
+
+.env-banner {
+  background-color: #1e293b;
+  margin: 1.5rem 2rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.env-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.env-label {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.env-tag.vercel {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #475569;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.env-code {
+  background-color: #0f172a;
+  color: #38bdf8;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.status-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-pill.idle {
+  background-color: #334155;
+  color: #cbd5e1;
+}
+
+.status-pill.loading {
+  background-color: #854d0e;
+  color: #fef08a;
+}
+
+.status-pill.success {
+  background-color: #166534;
+  color: #bbf7d0;
+}
+
+.status-pill.warning {
+  background-color: #9a3412;
+  color: #fed7aa;
+}
+
+.refresh-btn {
+  margin-left: auto;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.refresh-btn:hover {
+  background-color: #0369a1;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  color: #f8fafc;
+}
+
+.section-header p {
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  border-color: #38bdf8;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.item-category {
+  font-size: 0.75rem;
+  background-color: #334155;
+  color: #94a3b8;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.item-name {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: #f1f5f9;
+}
+
+.item-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.add-btn {
+  background-color: #0284c7;
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #0369a1;
+}
+
+.tiers-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.tier-card {
+  flex: 1;
+  min-width: 220px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.tier-number {
+  font-size: 0.75rem;
+  color: #38bdf8;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tier-card h3 {
+  margin: 0.5rem 0 1rem;
+  color: #f8fafc;
+}
+
+.tier-card p {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.tier-card code {
+  color: #38bdf8;
+  background-color: #0f172a;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.tier-badge {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: #334155;
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.tier-arrow {
+  font-size: 1.5rem;
+  color: #64748b;
+  font-weight: bold;
+}
+
+.devops-info-box {
+  background-color: #0f172a;
+  border-left: 4px solid #0284c7;
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.devops-info-box h4 {
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+.devops-info-box p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cart-view {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  max-width: 600px;
+}
+
+.empty-cart {
+  color: #94a3b8;
+  margin-top: 1rem;
+}
+
+.cart-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid #334155;
+  color: #64748b;
+  font-size: 0.85rem;
+  background-color: #1e293b;
+}
