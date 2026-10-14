@@ -159,7 +159,7 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        <p>SE3090 Software Engineering Frameworks — Lab Practical 11 | Student IT: IT24100131</p>
+        <p>SE3090 Software Engineering Frameworks — Lab Practical 11 | Student IT: IT24201016</p>
       </footer>
     </div>
   );
